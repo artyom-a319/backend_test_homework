@@ -1,0 +1,31 @@
+[tool.black]
+line-length = 79  # Можете задать свою длину строки
+target-version = ['py39']  # Можете указать свои версии Python
+include = '\.pyi?$'
+exclude = '''
+(
+    /(
+        \.eggs
+        | \.git
+        | \.hg
+        | \.mypy_cache
+        | \.tox
+        | \.venv
+        | \.svn
+        | _build
+        | buck-out
+        | build
+        | dist
+        | node_modules
+    )/
+    | (
+        ^__pycache__/
+        | ^_build/
+        | ^buck-out/
+        | ^build/
+        | ^dist/
+    )
+)
+
+# Добавьте следующую строку для использования одинарных кавычек
+single-quotes = true
